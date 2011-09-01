@@ -1,3 +1,16 @@
+# Class: 
+#
+# Description
+#
+# Parameters:
+#   
+# Actions:
+#
+# Requires:
+#
+# Sample Usage:
+#
+
 define limits::set (
   $domain,
   $type, 
