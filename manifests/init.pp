@@ -1,16 +1,20 @@
-# Class: 
+# Class: limits
 #
 # Description
+#  This class is designed to manage values for limits.conf by creating a file-fragment
+#  pattern and assembling into a product that can be used by the system.
 #
 # Parameters:
-#   
+#   This class takes no parameters. 
+#
 # Actions:
+#   Configures defined limits.conf entries using the file fragment [http://projects.puppetlabs.com/projects/puppet/wiki/Generating_a_config_file_from_fragments]
 #
 # Requires:
+#   - This module has no requirements.
 #
 # Sample Usage:
-#
-
+#   This class is controlled using a custom definition limits::set. See that module for usage information. 
 class limits {
   include limits::params
  
