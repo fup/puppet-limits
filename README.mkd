@@ -1,11 +1,10 @@
 #Class: limits
 
 ##Description
- This class is designed to manage values for limits.conf by creating a file-fragment
- pattern and assembling into a product that can be used by the system.
+ This class is designed to manage values for limits.conf by creating a file-fragment pattern and assembling into a product that can be used by the system.
 
 ##Parameters:
-  This class takes no parameters. 
+  This class takes no parameters.
 
 ##Actions:
   Configures defined limits.conf entries using the [file fragment](http://projects.puppetlabs.com/projects/puppet/wiki/Generating_a_config_file_from_fragments)
@@ -14,24 +13,27 @@
   - This module has no requirements.
 
 ##Sample Usage:
-  This class is controlled using a custom definition limits::set. See that module for usage information. 
+  This class is controlled using a custom definition limits::set. See that module for usage information.
 
-#Defintion: limits::set 
+#Defintion: limits::set
 
 ##Description
-  Used to create a new limit setting on a system. This is part of the file-fragment pattern.
-  NOTE: Due to an overlap in namespace, the 'namevar' for this defintiion cannot be used 
-  as a unique identifier. Please reference 'Sample Usage' for more information.
+  Used to create a new limit setting on a system. This is part of the file-fragment pattern.  NOTE: Due to an overlap in namespace, the 'namevar' for this defintiion cannot be used as a unique identifier. Please reference 'Sample Usage' for more information.
+
 ##Parameters:
   + $domain - The domain the limit scope covers. See limits.conf(5) for more info.
   + $type - The type of limit that is being set. See limits.conf(5) for more info.
   + $item - What item this limit is being applied to. See limits.conf(5) for more info.
   + $value - The value of the limit. See limits.conf(5) for more info.
+
 ##Actions:
-  This definition creates a File Fragment that will be assembled by Class limits. 
+  This definition creates a File Fragment that will be assembled by Class limits.
+
 ##Requires:
   - Class: limits
-Sample Usage:
+
+##Sample Usage:
+
 ```
   limits::set {'global-hard':
     domain => '*',
